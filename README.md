@@ -46,7 +46,9 @@ You'll need the following media files:
 ```
 
 You can curl them from here:
-`curl -o src/media/loop.mp4 http://iwillneverletyougo.com.s3.amazonaws.com/media/loop.mp4`
-`curl -o src/media/loop-square.mp4 http://iwillneverletyougo.com.s3.amazonaws.com/media/loop-square.mp4`
-`curl -o src/media/video.mp4 http://iwillneverletyougo.com.s3.amazonaws.com/media/video.mp4`
-`curl -o src/media/video-square.mp4 http://iwillneverletyougo.com.s3.amazonaws.com/media/video-square.mp4`
+```
+curl -o src/media/loop.mp4 http://iwillneverletyougo.com.s3.amazonaws.com/media/loop.mp4
+curl -o src/media/loop-square.mp4 http://iwillneverletyougo.com.s3.amazonaws.com/media/loop-square.mp4
+curl -o src/media/video.mp4 http://iwillneverletyougo.com.s3.amazonaws.com/media/video.mp4
+curl -o src/media/video-square.mp4 http://iwillneverletyougo.com.s3.amazonaws.com/media/video-square.mp4
+```
