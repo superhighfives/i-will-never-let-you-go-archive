@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>bandcamp</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="bandcamp" sketch:type="MSArtboardGroup" fill="#FF0000">
+            <path d="M50,2.55179517 C50,0.818861768 48.6083984,-0.279476307 46.9238281,0.0622288717 L19.7265625,6.0420695 C18.0664062,6.4325897 16.6748047,8.11670809 16.6748047,9.84964149 L16.6748047,32.3045532 L15.1611328,32.3045532 C13.8916016,32.3045532 12.4511719,32.4754058 10.9375,32.768296 C4.90722656,33.9154491 0,38.9433967 0,43.5320091 C0,48.145029 4.90722656,50.9274855 10.9375,49.7071098 C16.9677734,48.5599567 21.875,43.7516767 21.875,37.5033535 L21.875,18.7583837 L44.7998047,13.5595834 L44.7998047,26.05623 L43.2861328,26.05623 C42.0166016,26.05623 40.5761719,26.2270826 39.0625,26.5199727 C33.0322266,27.6671258 28.125,32.6950734 28.125,37.2836858 C28.125,41.8967058 33.0322266,44.6791622 39.0625,43.4587866 C45.0927734,42.3116335 50,37.5033535 50,31.2550302 L50,2.55179517 Z" id="music" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,30 @@
+%playback {
+  animation: fade-in-out 3.5s both 0.5s;
+  %playback__item {
+    font-family: $heading-stack;
+    font-style: italic;
+  }
+  &%playback__item--unsupported {
+    text-decoration: line-through;
+    color: $color-light-grey;
+    strong {
+      font-weight: normal;
+      color: $color-light-grey;
+    }
+  }
+}
+
+.playback {
+  @extend %playback;
+}
+
+.playback__item {
+  @extend %playback__item;
+  strong {
+    color: $brand-primary;
+  } 
+}
+
+.playback__item--unsupported {
+  @extend %playback__item--unsupported;
+}

@@ -1,0 +1,30 @@
+.stage-appear,
+.stage-enter {
+  transition: opacity 0.3s linear 0.3s;
+}
+.stage-leave {
+  transition: opacity 0.1s linear;
+}
+
+.stage-appear,
+.stage-enter {
+  opacity: 0.01;
+  &.stage-appear-active,
+  &.stage-enter-active {
+    opacity: 1;
+  }
+}
+
+.stage-leave {
+  opacity: 1;
+  &.stage-leave-active {
+    opacity: 0.01;
+  }
+}
+
+.stage-wrapper {
+  transition: filter 0.3s;
+  &.is-buffering {
+    filter: grayscale(100%);
+  }
+}

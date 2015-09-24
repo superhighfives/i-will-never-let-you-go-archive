@@ -1,0 +1,27 @@
+.heading-block {
+  text-align: center;
+  max-width: 50%;
+  @media (max-width: $screen-xs-max) {
+    max-width: 80%;
+  }
+  .heading-block__title,
+  .heading-block__subtitle,
+  .heading-block__note {
+    margin-bottom: 0;
+  }
+  .heading-block__title {
+    @extend .block-text;
+    color: $brand-primary;
+    padding-bottom: 0.5em;
+  }
+  .heading-block__subtitle {
+    @extend %heading-type;
+    @include type(24);
+    font-style: italic;
+  }
+  .heading-block__note {
+    @extend .block-text--sm;
+    color: $color-light-grey;
+    padding-top: 2em;
+  }
+}

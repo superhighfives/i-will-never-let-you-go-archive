@@ -1,0 +1,18 @@
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin type($size) {
+  font-size: #{$size / 16}em;
+}
+
+@mixin line-height($size) {
+  line-height: #{$size / 16}em;
+}

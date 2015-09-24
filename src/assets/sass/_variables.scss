@@ -1,0 +1,17 @@
+$color-white                   : #fff;
+$color-black                   : #000;
+$color-dark-grey               : #222;
+$color-mid-grey                : #333;
+$color-light-grey              : #999;
+$color-off-white               : #dedede;
+$color-red                     : #f02233;
+
+// Overriding Bootstrap
+$brand-primary                 : $color-red;
+$link-hover-color              : $color-black;
+
+$heading-stack                 : "Playfair Display", sans-serif;
+$font-stack                    : "Open Sans", sans-serif;
+
+$background-color              : $color-white;
+$text-color                    : $color-black;
