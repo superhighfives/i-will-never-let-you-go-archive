@@ -2,6 +2,12 @@
 
 An interactive WebGL music video.
 
+You can [watch it here](https://iwillneverletyougo.com/).
+
+You can read about [how it was made here](https://medium.com/@superhighfives/making-a-music-video-f60757ceb4cf).
+
+You can [check out my other music here](http://wearebrightly.com).
+
 ## Getting started
 
 To run, make sure you have [JSPM](http://jspm.io/)
