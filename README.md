@@ -25,13 +25,11 @@ npm install
 
 Then fire up the development server with `npm run dev` and check it out on [http://localhost:8888/](http://localhost:8888/)
 
-## Build
-
-Output to `/dist` with `npm run build`.
-
 ## Imgur support
 
-You'll need to add your own Imgur credentials. You can get the id and secret from the [Imgur API](https://api.imgur.com/) by [registering an application](https://api.imgur.com/oauth2/addclient). The album ID and hash is returned when you create it, which you can do using `gulp imgur:create` after you've added your ID and secret from the Imgur API.
+You'll need to add your own Imgur credentials, which you can add to `/credentials-imgur.js`. You can get the id and secret from the [Imgur API](https://api.imgur.com/) by [registering an application](https://api.imgur.com/oauth2/addclient).
+
+The album ID and hash is returned when created, and you can do so by running `gulp imgur:create`. You'll need to have added your ID and secret to `/credentials-imgur.js` from the Imgur API first though.
 
 ```
 module.exports = {
@@ -62,3 +60,11 @@ curl -o src/media/loop-square.mp4 http://iwillneverletyougo.com.s3.amazonaws.com
 curl -o src/media/video.mp4 http://iwillneverletyougo.com.s3.amazonaws.com/media/video.mp4
 curl -o src/media/video-square.mp4 http://iwillneverletyougo.com.s3.amazonaws.com/media/video-square.mp4
 ```
+
+## Build
+
+Output to `/dist` with `npm run build`. Host it wherever!
+
+## Thanks
+
+Thanks to [Glen Maddern](https://github.com/geelen/) for the advice, motivation and endless ideas. Superhero.
