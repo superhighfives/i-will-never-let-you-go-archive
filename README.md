@@ -1,3 +1,5 @@
+![](http://files.wearebrightly.com.s3.amazonaws.com/iwnlyg/screen-tight.jpg)
+
 # I Will Never Let You Go
 
 An interactive WebGL music video.
