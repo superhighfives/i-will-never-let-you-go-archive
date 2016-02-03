@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     url = require('url'),
     proxy = require('proxy-middleware'),
     preprocess = require('gulp-preprocess'),
-    strip = require('gulp-strip-debug'),
+    strip = require('gulp-strip-debug'),c
     shell = require('gulp-shell'),
     svgstore = require('gulp-svgstore'),
     cheerio = require('gulp-cheerio'),
@@ -30,7 +30,7 @@ gulp.task('default', ['build', 'sass:watch', 'preprocess:watch'], function () {
   })
 })
  
-gulp.task('sass', function () {
+gulp.task('sass', ['clean'], function () {
   return gulp.src('./src/assets/sass/**/*.scss')
     .pipe(sass())
     .pipe(autoprefixer({ browsers: ['last 2 versions'] }))
