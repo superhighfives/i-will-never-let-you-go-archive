@@ -1,4 +1,10 @@
 {
+  "scripts": {
+    "dev": "./node_modules/.bin/de dist && gulp",
+    "build-dev": "./node_modules/.bin/de dist && gulp build",
+    "build": "./node_modules/.bin/de dist && gulp build --production",
+    "deploy": "./node_modules/.bin/de dist && gulp build --production && gulp deploy"
+  },
   "jspm": {
     "directories": {
       "lib": "."

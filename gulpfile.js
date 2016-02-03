@@ -7,13 +7,12 @@ var gulp = require('gulp'),
     url = require('url'),
     proxy = require('proxy-middleware'),
     preprocess = require('gulp-preprocess'),
-    strip = require('gulp-strip-debug'),c
+    strip = require('gulp-strip-debug'),
     shell = require('gulp-shell'),
     svgstore = require('gulp-svgstore'),
     cheerio = require('gulp-cheerio'),
     svgmin = require('gulp-svgmin'),
     path = require('path'),
-    del = require('del'),
     fs = require('fs')
 
 // Static server with proxy
@@ -30,9 +29,9 @@ gulp.task('default', ['build', 'sass:watch', 'preprocess:watch'], function () {
   })
 })
  
-gulp.task('sass', ['clean'], function () {
+gulp.task('sass', function () {
   return gulp.src('./src/assets/sass/**/*.scss')
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({ browsers: ['last 2 versions'] }))
     .pipe(minify())
     .pipe(gulp.dest('./dist/assets/css'))
@@ -53,7 +52,7 @@ gulp.task('preprocess:watch', ['preprocess'], function() {
   gulp.watch('./src/*.html', ['preprocess'])
 })
 
-gulp.task('js', ['clean'], function() {
+gulp.task('js', function() {
   if(argv.production) {
     return gulp.src('')
       .pipe(shell([
@@ -68,19 +67,19 @@ gulp.task('debug', ['js'], function() {
     .pipe(gulp.dest('./dist/assets/js/'))
 })
 
-gulp.task('svg', ['clean'], function () {
-    return gulp.src('./src/assets/svg/*.svg')
-      .pipe(svgmin(function (file) {
-        var prefix = path.basename(file.relative, path.extname(file.relative))
-        return {
-          plugins: [{
-            cleanupIDs: {
-              prefix: prefix + '-',
-              minify: true
-            }
-        }]
-      }
-    }))
+gulp.task('svg', function () {
+  return gulp.src('./src/assets/svg/*.svg')
+    .pipe(svgmin(function (file) {
+      var prefix = path.basename(file.relative, path.extname(file.relative))
+      return {
+        plugins: [{
+          cleanupIDs: {
+            prefix: prefix + '-',
+            minify: true
+          }
+      }]
+    }
+  }))
   .pipe(cheerio({
     run: function ($) {
       $('[fill]').removeAttr('fill');
@@ -91,25 +90,21 @@ gulp.task('svg', ['clean'], function () {
   .pipe(gulp.dest('./src/assets/svg'))
 })
 
-gulp.task('copy', ['clean', 'sass', 'js', 'svg', 'debug'], function() {
+gulp.task('copy', function() {
   var files = [
-    'src/media/**/*',
-    'src/assets/images/**/*',
-    'src/favicon.ico',
-    'src/apple-touch-icon.png'
+    './src/media/*',
+    './src/assets/images/*',
+    './src/favicon.ico',
+    './src/apple-touch-icon.png'
   ]
   if(!argv.production) {
     files.push('src/lib/**/*')
   }
-  gulp.src(files, { base: './src' })
+  return gulp.src(files, { base: './src' })
     .pipe(gulp.dest('./dist/'))
 })
 
-gulp.task('clean', function(cb) {
-  del(['./dist/**/*',], cb)
-})
-
-gulp.task('build', ['clean', 'sass', 'js', 'svg', 'copy', 'preprocess'])
+gulp.task('build', ['sass', 'js', 'svg', 'copy', 'preprocess'])
 
 // Imgur tasks
 var request = require('request'),
