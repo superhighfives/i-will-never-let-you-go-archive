@@ -30,7 +30,7 @@ gulp.task('default', ['build', 'sass:watch', 'preprocess:watch'], function () {
   })
 })
  
-gulp.task('sass', ['clean'], function () {
+gulp.task('sass', function () {
   return gulp.src('./src/assets/sass/**/*.scss')
     .pipe(sass())
     .pipe(autoprefixer({ browsers: ['last 2 versions'] }))
