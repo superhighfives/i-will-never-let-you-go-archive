@@ -23,7 +23,11 @@ jspm install
 npm install
 ````
 
-Then fire up `gulp` and check it out on [http://localhost:8888/](http://localhost:8888/)
+Then fire up the development server with `npm run dev` and check it out on [http://localhost:8888/](http://localhost:8888/)
+
+## Build
+
+Output to `/dist` with `npm run build`.
 
 ## Imgur support
 
