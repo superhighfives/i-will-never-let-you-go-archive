@@ -12,20 +12,12 @@ You can [check out my other music here](http://wearebrightly.com).
 
 ## Getting started
 
-To run, make sure you have [JSPM](http://jspm.io/)
+First up, install the dependencies and [JSPM](http://jspm.io/):
 
 ````
-npm install -g jspm
-````
-
-Then install the dependencies:
-
-````
-jspm install
 npm install
+./node_modules/.bin/jspm install
 ````
-
-Then fire up the development server with `npm run dev` and check it out on [http://localhost:8888/](http://localhost:8888/)
 
 ## Imgur support
 
@@ -62,6 +54,10 @@ curl -o src/media/loop-square.mp4 http://iwillneverletyougo.com.s3.amazonaws.com
 curl -o src/media/video.mp4 http://iwillneverletyougo.com.s3.amazonaws.com/media/video.mp4
 curl -o src/media/video-square.mp4 http://iwillneverletyougo.com.s3.amazonaws.com/media/video-square.mp4
 ```
+
+## Fire it up
+
+Fire up the development server with `npm run dev` and check it out on [http://localhost:8888/](http://localhost:8888/)
 
 ## Build
 
