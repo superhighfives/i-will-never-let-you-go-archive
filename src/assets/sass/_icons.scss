@@ -1,0 +1,28 @@
+%icon {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  vertical-align: top;
+  fill: currentColor;
+}
+
+.icon {
+  @extend %icon;
+}
+
+.icon--sm {
+  @extend %icon;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.icon--lg {
+  @extend %icon;
+  width: 3em;
+  height: 3em;
+}
+
+ .icon--spinning {
+  fill: $color-light-grey;
+  animation: spin 2s infinite linear;
+ }

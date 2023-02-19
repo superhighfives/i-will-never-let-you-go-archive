@@ -1,0 +1,30 @@
+.options-box {
+  display: block;
+  padding: 0.5em;
+  margin: 0.5em;
+  text-align: center;
+  float: left;
+  text-align: center;
+  @include type(13);
+  color: rgba($color-red, 0.6);
+  .options-box__icon {
+    transition: color 0.3s, background-color 0.3s;
+    display: block;
+    margin: 0 auto;
+    color: $color-red;
+    border: 1px solid rgba($color-red, 0.25);
+    width: 8em;
+    height: 8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5em;
+  }
+  &:hover, &:active, &:focus {
+    color: $color-red;
+    .options-box__icon {
+      color: $color-white;
+      background-color: rgba($color-red, 0.9);
+    }
+  }
+}

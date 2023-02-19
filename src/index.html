@@ -1,0 +1,88 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>I Will Never Let You Go - A Song By Brightly</title>
+  <meta name="description" content="The real-time WebGL-powered interactive music video for the Brightly song 'I Will Never Let You Go'">
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <meta property="og:title" content="I Will Never Let You Go - A Song By Brightly" />
+  <meta property="og:description" content="The real-time WebGL-powered interactive music video for the Brightly song 'I Will Never Let You Go'" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://iwillneverletyougo.com" />
+  <meta property="og:image" content="http://iwillneverletyougo.com/apple-touch-icon.png" />
+</head>
+<body>
+
+  <div style="height: 0; width: 0; position: absolute; visibility: hidden">
+    <!-- @include ./assets/svg/svg.svg -->
+  </div>
+
+  <main>
+    <div class="loading">
+      <div class="loading__fallback">
+        <h1 class="loading__title">I Will Never Let You Go</h1>
+        <h2 class="loading__subtitle">Thank You For Listening</h2>
+        <a class="loading__link" href="http://youtu.be/1ikrtVm5T5c" target="_blank">Watch on <strong>YouTube</strong></a>
+        <a class="loading__link" href="http://music.wearebrightly.com" target="_blank">Buy on <strong>Bandcamp</strong></a>
+        <a class="loading__link" href="http://soundcloud.com/wearebrightly" target="_blank">Listen on <strong>Soundcloud</strong></a>
+        <a class="loading__link" href="http://twitter.com/wearebrightly" target="_blank">Follow via <strong>Twitter</strong></a>
+        <a class="loading__link" href="http://facebook.com/wearebrightly" target="_blank">Like via <strong>Facebook</strong></a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <a class="footer__link" target="_blank" href="https://music.wearebrightly.com/">Get the song on <span class="footer__highlight">Bandcamp</span></a>
+    <a class="footer__link" target="_blank" href="https://medium.com/@superhighfives/f60757ceb4cf">Read about it <span class="footer__highlight">on Medium</span></a>
+  </footer>
+
+  <!-- Webfonts -->
+  <script type="text/javascript">
+    WebFontConfig = {
+      google: { families: [ 'Open+Sans:400,600,300:latin', 'Playfair+Display:400,700,400italic,700italic:latin' ] }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+        '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+  </script>
+
+  <!-- Patching window.performance in iOS -->
+  <script>
+    (function(){
+      if ("performance" in window == false) { window.performance = {}; }
+      if ("now" in window.performance == false) {
+        var nowOffset = Date.now();
+        if (performance.timing && performance.timing.navigationStart) {
+          nowOffset = performance.timing.navigationStart;
+        }
+        window.performance.now = function now() {
+          return Date.now() - nowOffset;
+        }
+      }
+    })();
+  </script>
+
+  <!-- @if NODE_ENV = 'production' -->
+    <script src="assets/js/main.js"></script>
+  <!-- @endif -->
+  <!-- @if NODE_ENV = 'development' -->
+    <script src="jspm_packages/system.js"></script>
+    <script src="config.js"></script>
+    <script>
+      System.import('lib/main')
+    </script>
+  <!-- @endif -->
+
+</body>
+</html>

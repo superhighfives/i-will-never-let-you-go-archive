@@ -1,0 +1,28 @@
+%type-regular {
+  font-weight: 400;
+}
+
+%type-semibold {
+  font-weight: 600;
+}
+
+%type-bold {
+  font-weight: 700;
+}
+
+%type-upcase {
+  text-transform: uppercase;
+}
+
+%type-downcase {
+  text-transform: lowercase;
+}
+
+%heading-type {
+  font-family: $heading-stack;
+}
+
+%type {
+  font-family: $font-stack;
+  font-size: 16px;
+}

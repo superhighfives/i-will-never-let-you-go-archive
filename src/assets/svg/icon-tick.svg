@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>tick</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="tick" sketch:type="MSArtboardGroup" fill="#000000">
+            <path d="M44.7511588,16.2603074 C45.0829471,15.9480361 45.0829471,15.3820444 44.7511588,15.0697731 L38.9155892,9.23420346 C38.6033179,8.92193218 38.0373262,8.92193218 37.7250549,9.23420346 L20.0036594,26.9946328 L12.2749451,19.2268846 C11.9626738,18.9146133 11.3966821,18.9146133 11.0844108,19.2268846 L5.24884118,25.0624543 C4.91705294,25.3747255 4.91705294,25.9407172 5.24884118,26.2529885 L19.3986338,40.4222981 C19.5938034,40.5589168 19.769456,40.6565016 20.0036594,40.6565016 C20.2378629,40.6565016 20.4135155,40.5589168 20.608685,40.4222981 L44.7511588,16.2603074 Z" id="check" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

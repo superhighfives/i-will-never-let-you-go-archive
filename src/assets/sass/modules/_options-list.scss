@@ -1,0 +1,27 @@
+.options-list {
+  .options-list__item {
+    border: 1px solid rgba($color-red, 0.25);
+    display: block;
+    padding: 0.5em 3em;
+    margin: 0.5em;
+    text-align: center;
+    @extend %type-semibold;
+    @include type(14);
+    &:hover {
+      border-color: $color-black;
+    }
+  }
+  .options-list__item--reversed {
+    @extend .options-list__item;
+    background: $brand-primary;
+    color: $color-white;
+    &:hover {
+      background: $color-black;
+      color: $color-white;
+    }
+  }
+  .options-list__icon {
+    @extend .icon--sm;
+    margin-right: 0.5em;
+  }
+}

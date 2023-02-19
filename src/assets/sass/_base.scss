@@ -1,0 +1,70 @@
+html, body {
+  overflow: hidden;
+}
+
+body {
+  background: $background-color;
+  color: $text-color;
+  @extend %type;
+  min-width: 320px;
+  font-size: 16px;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-family: inherit;
+  color: inherit;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, hgroup,
+ul, ol, dl,
+blockquote, p, address,
+table, fieldset,
+figure, pre {
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+hr {
+  margin: 24px 0;
+  border-top: 2px solid $color-off-white;
+}
+
+p {
+  &.subtle {
+    color: $color-mid-grey;
+  }
+  &.last {
+    margin-bottom: 0;
+  }
+}
+
+a {
+  transition: color 0.3s, border-color 0.3s, background-color 0.3s;
+  &:hover, &:active, &:focus {
+    text-decoration: none;
+  }
+  &.link {
+    text-decoration: underline;
+    &:hover, &:active, &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+// hide flash of unstyled text
+html {
+  body {
+    opacity: 1;
+  }
+  &.wf-loading {
+    body {
+      opacity: 0;
+    }
+  }
+}

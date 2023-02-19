@@ -1,0 +1,20 @@
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 1em;
+  .footer__link {
+    @include type(13);
+    display: inline-block;
+    margin-right: 1em;
+  }
+  .footer__highlight {
+    @extend .block-text;
+    text-decoration: underline;
+    display: block;
+  }
+  @media (max-width: $screen-xs-max) {
+    display: none;
+  }
+
+}

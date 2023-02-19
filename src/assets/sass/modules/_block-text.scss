@@ -1,0 +1,22 @@
+%block-text {
+  @extend %heading-type;
+  @extend %type-bold;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  line-height: 1.25em;
+}
+
+.block-text {
+  @extend %block-text;
+  @include type(16)
+}
+
+.block-text--lg {
+  @extend %block-text;
+  @include type(18)
+}
+
+.block-text--sm {
+  @extend %block-text;
+  @include type(14)
+}

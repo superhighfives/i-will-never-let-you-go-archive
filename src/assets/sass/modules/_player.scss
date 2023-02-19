@@ -1,0 +1,30 @@
+.player {
+  transition: opacity 0.3s ease-in-out 0.3s;
+  canvas {
+    margin: 0;
+    padding: 0;
+  }
+  .player__video,
+  .player__webcam {
+    display: none;
+  }
+  &.player--hidden {
+    opacity: 0;
+  }
+}
+
+.buffering {
+  position: absolute;
+  top: 2em;
+  left: 2em;
+  line-height: 2em;
+  .buffering__status {
+    @extend .block-text--sm;
+    color: $color-light-grey;
+    padding-left: 0.5em;
+  }
+  .icon--lg {
+    width: 2em;
+    height: 2em;
+  }
+}
